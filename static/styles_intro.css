@@ -1,0 +1,165 @@
+body {
+  margin-top: 0%;
+  margin-left: 0%;
+  font-family: PT Sans,Helvetica,Arial,sans-serif;
+  -ms-scroll-chaining: none;
+  /* Prevents Metro from swiping to the next tab or app. */ }
+
+* {
+  box-sizing: border-box; }
+
+#my-tree:checked ~ .slider {
+  transform: translateX(0vw); }
+#my-tree:checked ~ nav label {
+  display: none; }
+#my-tree:checked ~ nav label.my-tree {
+  display: initial; }
+#my-tree:checked ~ nav .buttons {
+  user-select: none; }
+  #my-tree:checked ~ nav .buttons label {
+    display: inline-block; }
+  #my-tree:checked ~ nav .buttons label[for="my-tree"] {
+    cursor: default;
+    opacity: 1; }
+
+#profile:checked ~ .slider {
+  transform: translateX(-100vw); }
+#profile:checked ~ nav label {
+  display: none; }
+#profile:checked ~ nav label.profile {
+  display: initial; }
+#profile:checked ~ nav .buttons {
+  user-select: none; }
+  #profile:checked ~ nav .buttons label {
+    display: inline-block; }
+  #profile:checked ~ nav .buttons label[for="profile"] {
+    cursor: default;
+    opacity: 1; }
+
+#people-select:checked ~ .slider {
+  transform: translateX(-200vw); }
+#people-select:checked ~ nav label {
+  display: none; }
+#people-select:checked ~ nav label.people-select {
+  display: initial; }
+#people-select:checked ~ nav .buttons {
+  user-select: none; }
+  #people-select:checked ~ nav .buttons label {
+    display: inline-block; }
+  #people-select:checked ~ nav .buttons label[for="people-select"] {
+    cursor: default;
+    opacity: 1; }
+
+#leaves:checked ~ .slider {
+  transform: translateX(-300vw); }
+#leaves:checked ~ nav label {
+  display: none; }
+#leaves:checked ~ nav label.leaves {
+  display: initial; }
+#leaves:checked ~ nav .buttons {
+  user-select: none; }
+  #leaves:checked ~ nav .buttons label {
+    display: inline-block; }
+  #leaves:checked ~ nav .buttons label[for="leaves"] {
+    cursor: default;
+    opacity: 1; }
+
+input[type="radio"] {
+  position: fixed;
+  top: -100vh; }
+
+label {
+  cursor: pointer;
+  opacity: 0.5; }
+  label:hover {
+    opacity: 0.75; }
+
+nav {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  text-align: center; }
+  nav .done {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    right: 1em;
+    bottom: 1em; }
+  nav .buttons {
+    display: block;
+    margin-left: 20%;
+    position: fixed;
+    width: 60%;
+    left: 0;
+    color: white;
+    bottom: 1.8em; }
+    nav .buttons label {
+      font-size: 2em;
+      width: 9mm; }
+  nav .prev, nav .next {
+    position: absolute;
+    width: 50vw;
+    top: 0;
+    height: 100vh; }
+  nav .prev {
+    left: 0; }
+  nav .next {
+    right: 0; }
+
+.slider {
+  width: 400vw;
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s ease;
+  color: white; }
+
+.slide {
+  text-align: center;
+  float: left;
+  height: 100vh;
+  width: 100vw; }
+  .slide img {
+    display: block;
+    max-height: 70%;
+    max-width: 100%;
+    margin: auto; }
+  .slide h2 {
+    display: inline-block;
+    font-size: 5vh;
+    font-weight: normal;
+    text-align: left;
+    margin: 0 2em; }
+
+#my-tree-slide {
+  background-color: #1A3C40; }
+
+#profile-slide {
+  background-color: #1D5C63; }
+
+#people-select-slide {
+  background-color: #417D7A; }
+
+#leaves-slide {
+  background-color: #1A3C40;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/54046/leaves.png"); }
+  #leaves-slide h2 {
+    margin-top: 1em;
+    line-height: 100vh;
+    vertical-align: middle; }
+  
+
+/*# #go{
+  margin: -59%;
+  text-decoration: none;
+  background-color: #00AFA9;
+  border-radius: 50%;
+  padding: 80%;
+  z-index: 999;
+  color: aliceblue;
+*/
