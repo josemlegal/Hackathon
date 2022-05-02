@@ -14,9 +14,13 @@ db = SQLAlchemy(app)
 def inicio():
     return render_template('index.html')
 
-@app.route('/entrada')
-def entrada():
-    return render_template('index.html')
+@app.route('/entrada_espanol')
+def entrada_espanol():
+    return render_template('intro_esp.html')
+
+@app.route('/entrada_guarani')
+def entrada_guarani():
+    return render_template('intro_grn.html')
 
 @app.route('/formulario')
 def formulario():

@@ -134,20 +134,19 @@ nav {
     margin: 0 2em; }
 
 #my-tree-slide {
-  background-color: #1A3C40; }
+  background-color: #7BB3DB; }
 
 #profile-slide {
-  background-color: #1D5C63; }
+  background-color: #234157; }
 
 #people-select-slide {
-  background-color: #417D7A; }
+  background-color: #8B98A1; }
 
 #leaves-slide {
   background-color: #1A3C40;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/54046/leaves.png"); }
+  background-position: center; }
   #leaves-slide h2 {
     margin-top: 1em;
     line-height: 100vh;
