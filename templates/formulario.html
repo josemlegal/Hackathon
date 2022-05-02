@@ -3,7 +3,8 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="jquery.ui.datepicker-es.js"></script>
@@ -15,16 +16,18 @@
 </head>
 <body>
     <script src="{{url_for('static' , filename= 'formulario.js')}}"></script>
-    
+     
     <div id="svg_wrap"></div>
 
- <h1>Formulario</h1>
+    <h1>Ayudanos a crear tu Curriculum &#128196</h1>
+    
 <section>
   <p>Cuéntanos un poco sobre vos   &#9997 &#129321</p>
   <input type="text" placeholder="Nombre" />
   <input type="text" placeholder="Apellido" />
-  <input type="text" placeholder="Fecha de Nacimiento" <div id="datepicker"></div>
-  <input type="text" placeholder="Ocupación" />
+  <p>Fecha de Nacimiento &#128197 &#127881</p>
+ <input type="date" placeholder="Fecha de Nacimiento"/>
+ <textarea name="Sobremi" id="" cols="30" rows="10" placeholder="Un poco sobre vos"></textarea>
 </section>
 
 <section>
@@ -47,35 +50,187 @@
 <section>
   <p>Si ya trabajaste antes ¿Cual es tu experiencia? &#129309	&#128084	 </p>
   <input type="text" placeholder="¿Como se llamaba tu lugar de trabajo? " />
-  <input type="text" placeholder="¿" />
-  <input type="text" placeholder="Fecha de Ingreso " />
-  <input type="text" placeholder="Fecha de Salida " />
-  <input type="text" placeholder="Actividad Realizada " />
-  <input type="text" placeholder="Actividad Realizada " />
-  <input type="text" placeholder="Actividad Realizada " />
-  <p>Podes agregar más experiencia &#11013 </p>
-  <input type="text" placeholder="Lugar " />
-  <input type="text" placeholder="Cargo" />
-  <input type="text" placeholder="Fecha de Ingreso " />
-  <input type="text" placeholder="Fecha de Salida " />
+  <p>Fecha de Ingreso &#128197 &#10549</p>
+  <input type="date" placeholder="Fecha de Ingreso"  id="datepicker">
+  <p>Fecha de Salida &#128197 &#10548</p>
+  <input type="date" placeholder="Fecha de Salida"  id="datepicker">
   <input type="text" placeholder="Actividad Realizada " />
   <div class="input_fields_wrap">
     <button class="add_field_button"> &#10133 Actividades</button>
-    <div><input type="text" name="mytext[]"></div>
+    <!-- <div><input type="text" name="mytext[]"></div> -->
   </div>
-  
+ 
 
+</section>
+<section>
+  <p>Algunas referencias  &#129309	&#128084	 </p>
+  <p>Refenrencia laboral &#128084 </p>
+  <input type="text" placeholder="¿Como se llama? " />
+  <input type="text" placeholder="¿Lugar de trabajo?">
+  <input type="text" placeholder="Numero de Contacto">
+  <p>Referencia laboral &#128084</p>
+  <input type="text" placeholder="¿Como se llama? " />
+  <input type="text" placeholder="¿Lugar de trabajo?">
+  <input type="text" placeholder="Numero de Contacto">
+  <p>Referencia personal &#9996</p>
+  <input type="text" placeholder="¿Como se llama? " />
+  <input type="text" placeholder="¿Lugar de trabajo?">
+  <input type="text" placeholder="Numero de Contacto">
+  
 </section>
 
 <section>
   <p>¿Que formación academica tuviste? &#128221 &#128218</p>
   <input type="text" placeholder=" Educacion Primaria " />
-  <input type="text" placeholder="Fecha de Culminacion " />
+  <p>Fecha de Culminación &#128197 &#128282</p>
+  <input type="date" placeholder="Fecha de Culminacion " />
   <input type="text" placeholder="Educacion Secundaria " />
-  <input type="text" placeholder="Fecha de Culminacion " />
+  <p>Fecha de Culminación &#128197 &#128282</p>
+  <input type="date" placeholder="Fecha de Culminacion " />
   <input type="text" placeholder="Educacion Superior " />
-  <input type="text" placeholder="Fecha de Culminacion " />
+  <p>Fecha de Culminación &#128197 &#128282</p>
+  <input type="date" placeholder="Fecha de Culminacion " />
  
+  
+</section>
+<section>
+  <p>Idiomas</p>
+
+  <form action="/action_page.php">
+    <p>Primer Idioma &#127758</p>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Español</option>
+      <option value="Word">Inglés</option>
+      <option value="opel">Aleman</option>
+      <option value="opel">Chino Mandarin</option>
+    </select>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Basico</option>
+      <option value="Word">Intermedio</option>
+      <option value="opel">Avanzado</option>
+      <option value="opel">Nativo</option>
+    </select>
+    <p>Segundo Idioma &#127758</p>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Español</option>
+      <option value="Word">Inglés</option>
+      <option value="opel">Aleman</option>
+      <option value="opel">Chino Mandarin</option>
+    </select>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Basico</option>
+      <option value="Word">Intermedio</option>
+      <option value="opel">Avanzado</option>
+      <option value="opel">Nativo</option>
+    </select>
+    <p>Tercer Idioma &#127758</p>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Español</option>
+      <option value="Word">Inglés</option>
+      <option value="opel">Aleman</option>
+      <option value="opel">Chino Mandarin</option>
+    </select>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Word">Basico</option>
+      <option value="Word">Intermedio</option>
+      <option value="opel">Avanzado</option>
+      <option value="opel">Nativo</option>
+    </select>
+  </form>
+
+</section>
+
+<section>
+  <p>¿Habilidades? &#128221 &#128218</p>
+
+  <form action="/action_page.php">
+    <label for="cars">¿Habilidades en Ofimática? ¿Cuáles?  &#128187 </label>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Microsoft Excel</option>
+      <option value="Word">Microsoft Word</option>
+      <option value="opel">Microsoft Paint</option>
+    </select>
+  </form>
+  <form action="/action_page.php">
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Microsoft Excel</option>
+      <option value="Word">Microsoft Word</option>
+      <option value="opel">Microsoft Paint</option>
+    </select>
+  </form>
+  <form action="/action_page.php">
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Microsoft Excel</option>
+      <option value="Word">Microsoft Word</option>
+      <option value="opel">Microsoft Paint</option>
+    </select>
+  </form>
+
+  <form action="/action_page.php">
+    <label for="cars">Tus principales virtudes  &#129505 </label>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Honestidad</option>
+      <option value="Word">Lealtad</option>
+      <option value="opel">Puntualidad</option>
+    </select>
+  </form>
+  <form action="/action_page.php">
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Honestidad</option>
+      <option value="Word">Lealtad</option>
+      <option value="opel">Puntualidad</option>
+    </select>
+  </form>
+  <form action="/action_page.php">
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Honestidad</option>
+      <option value="Word">Lealtad</option>
+      <option value="opel">Puntualidad</option>
+    </select>
+  </form>
+
+  <form action="/action_page.php">
+    <label for="cars">Más sobre tus habilidades en el trabajo  &#128188  </label>
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Trabajo en Equipo</option>
+      <option value="Word">Trabajo bajo Presión</option>
+      <option value="opel">Enfoque en objetivos</option>
+    </select>
+  </form>
+  <form action="/action_page.php">
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Trabajo en Equipo</option>
+      <option value="Word">Trabajo bajo Presión</option>
+      <option value="opel">Enfoque en objetivos</option>
+    </select>
+  </form>
+  <form action="/action_page.php">
+    <select name="cars" id="cars">
+      <option value="Excel"></option>
+      <option value="Excel">Trabajo en Equipo</option>
+      <option value="Word">Trabajo bajo Presión</option>
+      <option value="opel">Enfoque en objetivos</option>
+    </select>
+  </form>
+
+
+
+
+  
   
 </section>
 
@@ -125,10 +280,6 @@ firstDay: 1
 });
 });
 
-</script>
-
-
-<script>
   function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
@@ -248,6 +399,7 @@ var countries = []
   
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>
 
