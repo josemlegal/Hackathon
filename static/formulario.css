@@ -9,7 +9,7 @@ body {
   background-size:cover;
   background-repeat:no-repeat;
   text-align: center;
- font-family: 'Noto Sans', sans-serif;
+ font-family: 'Roboto Slab', sans-serif;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -22,7 +22,8 @@ h1{
   font-weight:400;
   padding-top:0;
   margin-top:0;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab',serif;
+  font-weight: bold; 
 }
 
 #svg_form_time {
@@ -64,6 +65,20 @@ section {
   border-radius:5px;
   transition:transform 0.2s ease-in-out;
 }
+
+textarea  {
+  width: 100%;
+  margin: 7px 0px;
+  display: inline-block;
+  padding: 12px 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 1em;
+  font-family:inherit;
+  background:white;
+}
+
 
 
 input {
