@@ -13,12 +13,12 @@ a{
     padding: 30%;
 }
 a:hover{
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
+    background: #694b65;
+    color: white;
+    box-shadow: 0 0 5px #694b65,
+                0 0 25px #694b65,
+                0 0 50px #694b65,
+                0 0 200px #694b65;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 a:nth-child(1){
@@ -99,4 +99,8 @@ a span:nth-child(4){
     50%,100%{
         bottom: 100%;
     }
+}
+.fa-check:before {
+    content: "\f00c";
+    color: white;
 }
