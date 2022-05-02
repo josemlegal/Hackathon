@@ -134,16 +134,16 @@ nav {
     margin: 0 2em; }
 
 #my-tree-slide {
-  background-color: #7BB3DB; }
+  background-color: whitesmoke; }
 
 #profile-slide {
-  background-color: #234157; }
+  background-color: #BFCDE0; }
 
 #people-select-slide {
-  background-color: #8B98A1; }
+  background-color: #5D5D81; }
 
 #leaves-slide {
-  background-color: #1A3C40;
+  background-color: #3B3355;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; }
@@ -152,7 +152,12 @@ nav {
     line-height: 100vh;
     vertical-align: middle; }
   
-
+#letras1{
+color: black;
+}
+#letras2{
+  color:#40321f
+}
 /*# #go{
   margin: -59%;
   text-decoration: none;
