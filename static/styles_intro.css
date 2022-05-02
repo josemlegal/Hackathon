@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');
 body {
   margin-top: 0%;
   margin-left: 0%;
-  font-family: PT Sans,Helvetica,Arial,sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   -ms-scroll-chaining: none;
+
   /* Prevents Metro from swiping to the next tab or app. */ }
 
 * {
@@ -157,6 +159,9 @@ color: black;
 }
 #letras2{
   color:#40321f
+}
+#letras4{
+ color: white; 
 }
 /*# #go{
   margin: -59%;
