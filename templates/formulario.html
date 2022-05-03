@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="eng">
 <head>
@@ -23,11 +24,11 @@
     
 <section>
   <p>Cuéntanos un poco sobre vos   &#9997 &#129321</p>
-  <input type="text" placeholder="Nombre" />
-  <input type="text" placeholder="Apellido" />
+  <input type="text" placeholder="Nombre" name="nombre" />
+  <input type="text" placeholder="Apellido" name ="apellido"/>
   <p>Fecha de Nacimiento &#128197 &#127881</p>
- <input type="date" placeholder="Fecha de Nacimiento"/>
- <textarea name="Sobremi" id="" cols="30" rows="10" placeholder="Un poco sobre vos"></textarea>
+ <input type="date" placeholder="Fecha de Nacimiento" name = "fecha_nac"/>
+ <textarea name="sobre_mi" id="" cols="30" rows="10" placeholder="Un poco sobre vos"></textarea>
 </section>
 
 <section>
@@ -42,8 +43,8 @@
 
 <section>
   <p>¿Como podemos contactarte? &#128241 &#128231	</p>
-  <input type="text" placeholder="Direccion Email" />
-  <input type="text" placeholder="Telefono" />
+  <input name = "email" type="text" placeholder="Direccion Email" />
+  <input name = "num_tel" type="text" placeholder="Telefono" />
   <input type="text" placeholder="Celular" />
 </section>
 
@@ -104,6 +105,7 @@
       <option value="Word">Inglés</option>
       <option value="opel">Aleman</option>
       <option value="opel">Chino Mandarin</option>
+      <option value="opel">Guaraní </option>
     </select>
     <select name="cars" id="cars">
       <option value="Excel"></option>
@@ -119,6 +121,7 @@
       <option value="Word">Inglés</option>
       <option value="opel">Aleman</option>
       <option value="opel">Chino Mandarin</option>
+      <option value="opel">Guaraní </option>
     </select>
     <select name="cars" id="cars">
       <option value="Excel"></option>
@@ -134,6 +137,7 @@
       <option value="Word">Inglés</option>
       <option value="opel">Aleman</option>
       <option value="opel">Chino Mandarin</option>
+      <option value="opel">Guaraní </option>
     </select>
     <select name="cars" id="cars">
       <option value="Excel"></option>
@@ -228,16 +232,21 @@
     </select>
   </form>
 
-
-
-
-  
-  
 </section>
 <section>
   <p1>Foto para el CV &#128248</p1>
   <input type="file" name="myImage" accept="image/*" class="subida" />
 </section>
+
+
+<section class="centro">
+
+  <iframe class = "video" width="560" height="315" src="https://www.youtube.com/embed/ly36kn0ug4k" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+</section>
+
+
+
   <div class="button" id="prev">&larr; Atras</div>
 <div class="button" id="next">Siguiente &rarr;</div>
 <div class="button" id="submit">Aceptar y enviar formulario</div>
