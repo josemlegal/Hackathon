@@ -1,60 +1,97 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{url_for('static' , filename= 'button_animation_intro.css')}}">
-  <link rel="stylesheet" href="{{url_for('static' , filename= 'styles_intro.css')}}">
-  <title>Document</title>
-</head>
-<body>
-  <input type="radio" id="my-tree" name="slide-choice" checked>
-<input type="radio" id="profile" name="slide-choice">
-<input type="radio" id="people-select" name="slide-choice">
-<input type="radio" id="leaves" name="slide-choice">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static' , filename= 'button_animation_intro.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static' , filename= 'styles_intro.css')}}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" id="my-tree" name="slide-choice" checked />
+    <input type="radio" id="profile" name="slide-choice" />
+    <input type="radio" id="people-select" name="slide-choice" />
+    <input type="radio" id="leaves" name="slide-choice" />
 
-<div class="slider">
-  <div class="slide" id="my-tree-slide">
-    <img src='../static/img_1.png' id="imagenes_grandes">
-    <h2 id="letras1">Dedicada a ayudarte a conseguir empleo </h2>
-  </div>
-  <div class="slide" id="profile-slide">
-    <img src="../static/img_2.png" id="imagenes_grandes2">
-    <h2 id="letras2">Facilitandote a crear tu primer currículum formal </h2>
-  </div>
-  <div class="slide" id="people-select-slide">
-    <img src="../static/img_4.png">
-    <h2 id="letras3">Acercandote al empleador</h2>
-  </div>
-  <div class="slide"  style="background-color:#3B3355; ">
-    <img src='../static/img_3.png' id="imagenes_grandes">
-    <h2 id="letras4">Vamos!</h2>
-  </div> 
-</div>
+    <div class="slider">
+      <div class="slide" id="my-tree-slide">
+        <img src="../static/img_1.png" id="imagenes_grandes" />
+        <h2 id="letras1">Dedicada a ayudarte a conseguir empleo</h2>
+      </div>
+      <div class="slide" id="profile-slide">
+        <img src="../static/img_2.png" id="imagenes_grandes2" />
+        <h2 id="letras2">Facilitandote a crear tu primer currículum formal</h2>
+      </div>
+      <div class="slide" id="people-select-slide">
+        <img src="../static/img_4.png" />
+        <h2 id="letras3">Acercandote al empleador</h2>
+      </div>
+      <div class="slide" style="background-color: #3b3355">
+        <img src="../static/img_3.png" id="imagenes_grandes" />
+        <h2 id="letras4">Vamos!</h2>
+      </div>
+    </div>
 
-<nav>
-  <label class="next my-tree" title="Next to profile" for="profile"></label>
-  <label class="done my-tree" title="Next to profile" for="profile"><i class="fa fa-angle-right" aria-hidden="true"></i></label>
-  
-  <label class="prev profile" title="Back to tree" for="my-tree"></label>
-  <label class="next profile" title="Next to people selection" for="people-select"></label>
-  <label class="done profile" title="Next to people selection" for="people-select"><i class="fa fa-angle-right" aria-hidden="true"></i></label>
-  
-  <label class="prev people-select" title="Back to profile" for="profile"></label>
-  <label class="next people-select" title="Next is let's go!" for="leaves"></label>
-  <label class="done people-select" title="Next is let's go!" for="leaves"><i class="fa fa-angle-right" aria-hidden="true"></i></label>
+    <nav>
+      <label class="next my-tree" title="Next to profile" for="profile"></label>
+      <label class="done my-tree" title="Next to profile" for="profile"
+        ><i class="fa fa-angle-right" aria-hidden="true"></i
+      ></label>
 
-  <label class="prev leaves"  title="Back to people selection" for="people-select"></label>
-<label class="done leaves"  title="Let's go!"><a href="{{url_for('formulario')}}" class="fa fa-check" id="go" aria-hidden="true"></a></label>
+      <label class="prev profile" title="Back to tree" for="my-tree"></label>
+      <label
+        class="next profile"
+        title="Next to people selection"
+        for="people-select"
+      ></label>
+      <label
+        class="done profile"
+        title="Next to people selection"
+        for="people-select"
+        ><i class="fa fa-angle-right" aria-hidden="true"></i
+      ></label>
 
-  <div class="buttons">
-    <label for="my-tree" title="Tree">●</label>
-    <label for="profile" title="Profile">●</label>
-    <label for="people-select" title="People selection">●</label>
-    <label for="leaves" title="Let's go!">●</label>
-  </div>
-</nav>
-<script src="https://use.fontawesome.com/422198ac60.js"></script>
+      <label
+        class="prev people-select"
+        title="Back to profile"
+        for="profile"
+      ></label>
+      <label
+        class="next people-select"
+        title="Next is let's go!"
+        for="leaves"
+      ></label>
+      <label class="done people-select" title="Next is let's go!" for="leaves"
+        ><i class="fa fa-angle-right" aria-hidden="true"></i
+      ></label>
 
-</body>
+      <label
+        class="prev leaves"
+        title="Back to people selection"
+        for="people-select"
+      ></label>
+      <label class="done leaves" title="Let's go!"
+        ><a
+          href="{{url_for('formulario_guarani')}}"
+          class="fa fa-check"
+          id="go"
+          aria-hidden="true"
+        ></a
+      ></label>
+
+      <div class="buttons">
+        <label for="my-tree" title="Tree">●</label>
+        <label for="profile" title="Profile">●</label>
+        <label for="people-select" title="People selection">●</label>
+        <label for="leaves" title="Let's go!">●</label>
+      </div>
+    </nav>
+    <script src="https://use.fontawesome.com/422198ac60.js"></script>
+  </body>
 </html>
