@@ -25,8 +25,8 @@
         <div id="header">
             <div class="contactDetails">
                 <ul>
-                    <li class="icon" title="Kirjuta mulle!"><a href="mailto:my@mail.ee"><i class="fa fa-envelope">&nbsp;&nbsp;</i>Direccion de Correo</a></li>
-                    <li class="icon" title="Helista mulle!"><a href="tel:1234567"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Numero de telefono</a></li>
+                    <li class="icon" title="Kirjuta mulle!"><a href='{{data["perfil"]["email"]}}'><i class="fa fa-envelope">&nbsp;&nbsp;</i>{{data["perfil"]["email"]}}</a></li>
+                    <li class="icon" title="Helista mulle!"><a href='{{data["perfil"]["num_tel"]}}'><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;{{data["perfil"]["num_tel"]}}</a></li>
                 
                 </ul>
             </div>
@@ -36,7 +36,7 @@
                 <img id="avatar" src="https://visualangle.ee/delivery/temp_image/icon.png" alt="Margus Lillemagi" title="See olen mina" />
             </div>
             <div id="name">
-                <h1>Nombre</br>Apellido<span class="nameDetails">&nbsp;&nbsp;Fecha de Nacimiento</span></h1>
+                <h1>{{data["perfil"]["nombre"]}}</br>{{data["perfil"]["apellido"]}}<span class="nameDetails">&nbsp;&nbsp;{{data["perfil"]["fecha_nac"]}}</span></h1>
             </div>
             <div class="clear"></div>
         </div>
@@ -47,7 +47,8 @@
                     <h1>Sobre mí</h1>
                     </div>
                     <div class="sectionContent">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<body>
+                    <p>{{data["perfil"]["sobre_mi"]}}</p>
                     </div>
                 </article>
                 <div class="clear"></div>
@@ -59,18 +60,18 @@
                 <div class="sectionContent">
                     <ul class="keySkills">
                     <li class="subDetails">Virtudes</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Honestidad</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Lealtad</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Puntualidad</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud1"]}}</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud2"]}}</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud3"]}}</li>
                     <li class="subDetails">Habilidades</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Trabajo en Equipo</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Trabajo bajo presion</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Enfoque en objetivos</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab1"]}}</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab2"]}}</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab3"]}}</li>
 
                     <li class="subDetails">Manejo de Software</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Word</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Excel</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Paint</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft1"]}}</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft2"]}}</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft3"]}}</li>
 
                     </ul>
                 </div>
@@ -82,9 +83,9 @@
                 </div>
                 <div class="sectionContent">
                     <ul class="list">
-                        <li><span class="subDetails">2018 - k.a.&nbsp;&nbsp;</span><span class="bold">Universidad Nacional</span> - San Lorenzo.</li>
-                        <li><span class="subDetails">2010 - 2012&nbsp;&nbsp;</span><span class="bold">Colegio Tecnico</span>- Cañadita</li>
-                        <li><span class="subDetails">2008 - k.a.&nbsp;&nbsp;</span><span class="bold">Escuelita Kañy</span> - Kykyho</li>
+                        <li><span class="subDetails">{{data["perfil"]["añoinicio1"]}} - {{data["perfil"]["añofin1"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["enteduc1"]}}</span> - {{data["perfil"]["ciuform1"]}}</li>
+                        <li><span class="subDetails">{{data["perfil"]["añoinicio2"]}} - {{data["perfil"]["añofin2"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["enteduc2"]}}</span>- {{data["perfil"]["ciuform2"]}}</li>
+                        <li><span class="subDetails">{{data["perfil"]["añoinicio3"]}} - {{data["perfil"]["añofin3"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["enteduc3"]}}</span> - {{data["perfil"]["ciuform3"]}}</li>
                 </div>
                 <div class="clear"></div>
             </section>
@@ -94,10 +95,10 @@
                 </div>
                 <div class="sectionContent">
                     <ul class="list">
-                    <li><span class="subDetails">2018 - k.a.&nbsp;&nbsp;</span><span class="bold">Lorem Ipsum</span> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
-                    <li><span class="subDetails">2010 - 2012&nbsp;&nbsp;</span><span class="bold">Lorem Ipsum</span>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
-                    <li><span class="subDetails">2008 - k.a.&nbsp;&nbsp;</span><span class="bold">Lorem Ipsum</span> - veebi- ja multimeedia lahenduste kujundamine, arendamine ja haldamine ning klientide nõustamine.</li>
-                    <li><span class="subDetails">1990 - 2008.&nbsp;&nbsp;</span><span class="bold">Lorem Ipsum</span> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+                    <li><span class="subDetails">{{data["perfil"]["añoinicio1"]}} - {{data["perfil"]["añofin1"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto1"]}}</span> -{{data["perfil"]["actrealiz1"]}}</li>
+                    <li><span class="subDetails">{{data["perfil"]["añoinicio2"]}} - {{data["perfil"]["añofin2"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto2"]}}</span> -{{data["perfil"]["actrealiz2"]}}</li>
+                    <li><span class="subDetails">{{data["perfil"]["añoinicio3"]}} - {{data["perfil"]["añofin3"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto3"]}}</span> -{{data["perfil"]["actrealiz3"]}}</li>
+                    <li><span class="subDetails">{{data["perfil"]["añoinicio4"]}} - {{data["perfil"]["añofin4"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto4"]}}</span> -{{data["perfil"]["actrealiz4"]}}</li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -108,10 +109,9 @@
                 </div>
                 <div class="sectionContent">
                     <ul class="list">
-                    <li><span class="subDetails">2017-2019&nbsp;&nbsp;</span>Lorem ipsum dolor sit amet, consectetur</li>
-                    <li><span class="subDetails">2001-2002&nbsp;&nbsp;</span>Lorem ipsum dolor sit amet</li>
-                    <li><span class="subDetails">1997-1999&nbsp;&nbsp;</span>Consectetur adipiscing elit</li>
-                    <li><span class="subDetails">1975-1986&nbsp;&nbsp;</span>Adipiscing elit</li>
+                    <li><span class="subDetails">{{data["perfil"]["contactoref1"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref1"]}}</li>
+                    <li><span class="subDetails">{{data["perfil"]["contactoref2"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref2"]}}</li>
+                    <li><span class="subDetails">{{data["perfil"]["contactoref3"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref3"]}}</li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -122,9 +122,9 @@
                 </div>
                 <div class="sectionContent">
                     <ul class="list">
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Ingles - Intermedio</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Espanhol - Nativo</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Guarani - Nativo</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma1"]}} - {{data["perfil"]["idiomanivel1"]}} </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma2"]}} - {{data["perfil"]["idiomanivel2"]}} </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma3"]}} - {{data["perfil"]["idiomanivel3"]}} </li>
                     </ul>
                 </div>
                 <div class="clear"></div>
