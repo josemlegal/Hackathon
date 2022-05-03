@@ -100,6 +100,7 @@ div.container {
 }
 
 section {
+  display: grid;
   padding: 50px ;
   max-width: 300px;
   margin: 30px auto;
@@ -169,4 +170,8 @@ margin-top:0;
 .button{
   width: auto;
   height: auto;
+}
+.idiomanivel1 {
+
+display: none;
 }
