@@ -12,90 +12,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static' , filename= 'formulario.css')}}"/>
-    <title>BusquedaTrabajo</title>
+    <title>Rembiaporehegua</title>
 </head>
 <body>
     <script src="{{url_for('static' , filename= 'formulario.js')}}"></script>
      
     <div id="svg_wrap"></div>
 
-    <h1>Ayudanos a crear tu Curriculum &#128196</h1>
+    <h1>Oreipytyvõ jajapohaguã oñondive nde tekove arandupy &#128196</h1>
   
     
   <form autocomplete="on" action="/api/agregardatos" method="POST">
 <section>
-  <p>Cuéntanos un poco sobre vos   &#9997 &#129321</p>
-  <input type="text" name="nombre" placeholder="Nombre" />
-  <input type="text" name="apellido" placeholder="Apellido" />
-  <p>Fecha de Nacimiento &#128197 &#127881</p>
- <input type="date" name="fecha_nac" placeholder="Fecha de Nacimiento"/>
- <textarea name="sobre_mi" id="" cols="30" rows="10" placeholder="Un poco sobre vos"></textarea>
+  <p>Emombe'umi oreve mbykymi ndereheguá   &#9997 &#129321</p>
+  <input type="text" name="nombre" placeholder="Rera" />
+  <input type="text" name="apellido" placeholder="Rerajoapy" />
+  <p>Aramboty &#128197 &#127881</p>
+ <input type="date" name="fecha_nac" placeholder="Aramboty"/>
+ <textarea name="sobre_mi" id="" cols="30" rows="10" placeholder="Mbykymi ndereheguá"></textarea>
 </section>
 
 <section>
-  <p>¿De donde sos ? &#127968 &#128205 </p>
+  <p>¿Moõguá nde ? &#127968 &#128205 </p>
     <div class="autocomplete" style="width:300px;">
-      <input id="myInput" name="departamento"type="text" placeholder="Departamento">
+      <input id="myInput" name="departamento"type="text" placeholder="Tetãvore">
     </div>
-  <input type="text" name="localidad" placeholder="Ciudad/Distrito" />
+  <input type="text" name="localidad" placeholder="Táva" />
 </section>
 
 <section>
-  <p>¿Como podemos contactarte? &#128241 &#128231	</p>
-  <input type="text" name="email" placeholder="Direccion Email" />
-  <input type="text" name="num_tel"  placeholder="Celular" />
+  <p>¿Mba'éicha ikatu rotopa? &#128241 &#128231	</p>
+  <input type="text" name="email" placeholder="Pareha" />
+  <input type="text" name="num_tel"  placeholder="Pumbyry" />
 </section>
 
 <section>
-  <p>Si ya trabajaste antes ¿Cual es tu experiencia? &#129309	&#128084	 </p>
-  <input type="text" name="nomempresa1" placeholder="¿Como se llamaba tu lugar de trabajo? " />
-  <p>Fecha de Ingreso &#128197 &#10549</p>
-  <input type="date" name="añoinicio1" placeholder="Fecha de Ingreso"  id="datepicker">
-  <p>Fecha de Salida &#128197 &#10548</p>
-  <input type="date" name="añofin1" placeholder="Fecha de Salida"  id="datepicker">
-  <input type="text" name="actrealiz1" placeholder="Actividad Realizada " />
-  <div class="input_fields_wrap">
-    <button class="add_field_button"> &#10133 Actividades</button>
-    <!-- <div><input type="text" name="mytext[]"></div> -->
+  <p>Oĩmeramo remba'apoma ra'e  ¿Mba'e nde rembiasakue ha mba'epepa ndekatupyryve? &#129309	&#128084	 </p>
+  <input type="text" name="nomempresa1" placeholder="¿Mba'eicha irera remba'apohaguépe? " />
+  <p>Ára reyke ñepyrũhague &#128197 &#10549</p>
+  <input type="date" name="añoinicio1" placeholder="Ára reyke"  id="datepicker">
+  <p>Ára rejeihagué pe mba'apo haguegui &#128197 &#10548</p>
+  <input type="date" name="añofin1" placeholder="Ára rejeihagué"  id="datepicker">
+  <input type="text" name="actrealiz1" placeholder="Mba'e rejapoakue " />
   </div>
  
 
 </section>
 <section>
-  <p>Algunas referencias  &#129309	&#128084	 </p>
-  <p>Refenrencia laboral &#128084 </p>
-  <input type="text" name="nombreref1" placeholder="¿Como se llama? " />
-  <input type="text" name= "empresaref1" placeholder="¿Lugar de trabajo?">
-  <input type="text" name="contactoref1"  placeholder="Numero de Contacto">
-  <p>Referencia laboral &#128084</p>
-  <input type="text"  name="nombreref2" placeholder="¿Como se llama? " />
-  <input type="text" name= "empresaref1" placeholder="¿Lugar de trabajo?">
-  <input type="text" name="contactoref2" placeholder="Numero de Contacto">
-  <p>Referencia personal &#9996</p>
-  <input type="text" name="nombreref3" placeholder="¿Como se llama? " />
-  <input type="text" name= "empresaref1" placeholder="¿Lugar de trabajo?">
-  <input type="text" name="contactoref1" placeholder="Numero de Contacto">
+  <p> Rembiasakue &#129309	&#128084	 </p>
+  <p>Tekove ikatuva oñangapyhy nde rembiasakue remba'apohaguepe yma &#128084 </p>
+  <input type="text" name="nombreref1" placeholder="¿Mba'eicha irera? " />
+  <input type="text" name= "empresaref1" placeholder="¿Mo'o ha'e omba'apo?">
+  <input type="text" name="contactoref1"  placeholder="Pumbyry">
+  <p>Tekove ikatuva oñangapyhy nde rembiasakue remba'apohaguepe yma &#128084</p>
+  <input type="text"  name="nombreref2" placeholder="¿Mba'eicha irera? " />
+  <input type="text" name= "empresaref1" placeholder="¿Mo'o ha'e omba'apo?">
+  <input type="text" name="contactoref2" placeholder="Pumbyry">
+  <p>Tekove ikatuva oñangapyhy nde rembiasakue &#9996</p>
+  <input type="text" name="nombreref3" placeholder="¿Mba'eicha irera? " />
+  <input type="text" name= "empresaref1" placeholder="¿Mo'o ha'e omba'apo?">
+  <input type="text" name="contactoref1" placeholder="Pumbyry">
   
 </section>
 
 <section>
-  <p>¿Que formación academica tuviste? &#128221 &#128218</p>
-  <input type="text" name="enteduc1" placeholder=" Educacion Primaria " />
-  <p> Fecha de Culminación &#128197 &#128282</p>
-  <input type="date" name="añofin1" placeholder="Fecha de Culminacion " />
-  <input  type="text" name="enteduc2" placeholder="Educacion Secundaria " />
-  <p> Fecha de Culminación &#128197 &#128282</p>
-  <input type="date" name="añofin2" placeholder="Fecha de Culminacion " />
-  <input  type="text"  name="enteduc3" placeholder="Educacion Superior " />
-  <p> Fecha de Culminación &#128197 &#128282</p>
-  <input type="date" name="añofin3" placeholder="Fecha de Culminacion " />
+  <p>¿Mba'e eñembo'e va'ekue? &#128221 &#128218</p>
+  <input type="text" name="enteduc1" placeholder=" Mbo'ehao " />
+  <p> Ára rejeihagué &#128197 &#128282</p>
+  <input type="date" name="añofin1" placeholder="Ára" />
+  <input  type="text" name="enteduc2" placeholder="Moõ reho vaekue mbo'ehao " />
+  <p> Ára rejeihagué  &#128197 &#128282</p>
+  <input type="date" name="añofin2" placeholder="Ára" />
+  <input  type="text"  name="enteduc3" placeholder="Moõ reho vaekue ñembo'e mbyteha " />
+  <p> Ára rejeihagué &#128197 &#128282</p>
+  <input type="date" name="añofin3" placeholder="Ára " />
  
   
 </section>
 <section>
-  <p>Idiomas</p>
+  <p>Ñe'e</p>
 
-    <p>Primer Idioma &#127758</p>
+    <p>Ñe'e Ypy &#127758</p>
     <select name="idioma1" id="cars">
       <option value=" "></option>
       <option value="Español">Español</option>
@@ -105,12 +102,12 @@
     </select>
     <select name="idiomanivel1" id="cars">
       <option value=" "></option>
-      <option value="Basico">Basico</option>
-      <option value="Intermedio">Intermedio</option>
-      <option value="Avanzado">Avanzado</option>
-      <option value="Nativo">Nativo</option>
+      <option value="Basico">Aikuaamimi</option>
+      <option value="Intermedio">Aikuaa</option>
+      <option value="Avanzado">Aikuaa porã</option>
+      <option value="Nativo">Aikuaa paite </option>
     </select>
-    <p>Segundo Idioma &#127758</p>
+    <p>Ñe'e mokoha &#127758</p>
     <select name="idioma2" id="cars">
       <option value=" "></option>
       <option value="Español">Español</option>
@@ -120,12 +117,12 @@
     </select>
     <select name="idiomanivel2" id="cars">
       <option value=" "></option>
-      <option value="Basico">Basico</option>
-      <option value="Intermedio">Intermedio</option>
-      <option value="Avanzado">Avanzado</option>
-      <option value="Nativo">Nativo</option>
+      <option value="Basico">Aikuaamimi</option>
+      <option value="Intermedio">Aikuaa</option>
+      <option value="Avanzado">Aikuaa porã</option>
+      <option value="Nativo">Aikuaa paite</option>
     </select>
-    <p>Tercer Idioma &#127758</p>
+    <p>Ñe'e mbohapyha &#127758</p>
     <select name="idioma3" id="cars">
       <option value="Excel"></option>
       <option value="Word">Español</option>
@@ -135,18 +132,18 @@
     </select>
     <select name="idiomanivel3" id="cars">
       <option value="Excel"></option>
-      <option value="Word">Basico</option>
-      <option value="Word">Intermedio</option>
-      <option value="opel">Avanzado</option>
-      <option value="opel">Nativo</option>
+      <option value="Word">Aikuaamimi</option>
+      <option value="Word">Aikuaa</option>
+      <option value="opel">Aikuaa porã</option>
+      <option value="opel">Aikuaa paite</option>
     </select>
 
 </section>
 <section>
-  <p>¿Habilidades? &#128221 &#128218</p>
+  <p>¿Kombutadóra Katypy? &#128221 &#128218</p>
   
 
-    <label for="cars">¿Habilidades en Ofimática? ¿Cuáles?  &#128187 </label>
+    <label for="cars">¿Kombutadóra Katypy?   &#128187 </label>
     <select name="hab1" id="cars">
       <option value=" "></option>
       <option value="Excel">Microsoft Excel</option>
@@ -168,48 +165,48 @@
       <option value="Word">Microsoft Word</option>
       <option value="opel">Microsoft Paint</option>
     </select>
-    <label for="cars">Tus principales virtudes  &#129505 </label>
+    <label for="cars">Mba'epe nde marangatu  &#129505 </label>
     <select name="virtud1" id="cars">
       <option value=" "></option>
-      <option value="Honestidad">Honestidad</option>
-      <option value="Lealtad">Lealtad</option>
-      <option value="Puntualidad">Puntualidad</option>
+      <option value="Honestidad">Mbotavy'ỹ</option>
+      <option value="Lealtad">Jeroviapy</option>
+      <option value="Puntualidad">Reguahe aravoitepe</option>
     </select>
     
     <select name="virtud2" id="cars">
       <option value=" "></option>
-      <option value="Honestidad">Honestidad</option>
-      <option value="Lealtad">Lealtad</option>
-      <option value="Puntualidad">Puntualidad</option>
+      <option value="Honestidad">Mbotavy'ỹ</option>
+      <option value="Lealtad">Jeroviapy</option>
+      <option value="Puntualidad">Reguahe aravoitepe</option>
     </select>
     
     <select name="virtud3" id="cars">      
       <option value=" "></option>
-      <option value="Honestidad">Honestidad</option>
-      <option value="Lealtad">Lealtad</option>
-      <option value="Puntualidad">Puntualidad</option>
+      <option value="Honestidad">Mbotavy'ỹ</option>
+      <option value="Lealtad">Jeroviapy</option>
+      <option value="Puntualidad">Reguahe aravoitepe</option>
     </select>
     
-    <label for="cars">Más sobre tus habilidades en el trabajo  &#128188  </label>
+    <label for="cars">Emombe'uve oreve mba'epepa nde katupyryha remba'apohape  &#128188  </label>
     <select name="hab1" id="cars">
       <option value=" "></option>
-      <option value="Trabajo En Equipo">Trabajo en Equipo</option>
-      <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
-      <option value="Enfoque en objetivos">Enfoque en objetivos</option>
+      <option value="Trabajo En Equipo">Remba'apokuaa Atype</option>
+      <option value="Trabajo bajo Presión">Remba'apokua jopype</option>
+      <option value="Enfoque en objetivos">Ekuaa mba'e ehopytysea</option>
     </select>
     
     <select name="hab2" id="cars">
       <option value=" "></option>
-      <option value="Trabajo En Equipo">Trabajo en Equipo</option>
-      <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
-      <option value="Enfoque en objetivos">Enfoque en objetivos</option>
+      <option value="Trabajo En Equipo">Remba'apokuaa Atype</option>
+      <option value="Trabajo bajo Presión">Remba'apokua jopype</option>
+      <option value="Enfoque en objetivos">Ekuaa mba'e ehopytysea</option>
     </select>
     
     <select name="hab3" id="cars">
       <option value=" "></option>
-      <option value="Trabajo En Equipo">Trabajo en Equipo</option>
-      <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
-      <option value="Enfoque en objetivos">Enfoque en objetivos</option>
+      <option value="Trabajo En Equipo">Remba'apokuaa Atype</option>
+      <option value="Trabajo bajo Presión">Remba'apokua jopype</option>
+      <option value="Enfoque en objetivos">Ekuaa mba'e ehopytysea</option>
     </select>
 
 
