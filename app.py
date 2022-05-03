@@ -24,10 +24,6 @@ def entrada_espanol():
 def entrada_guarani():
     return render_template('intro_grn.html')
 
-@app.route("/search4per", methods=["GET"])
-def search4pera():
-    return render_template("search4per.html")
-
 #AGARRAMOS LOS DATOS QUE NECESITAMOS DE LA BASE DE DATOS Y LO CONVERTIMOS A JSON
 @app.route("/api/datitos", methods=["GET"]) #get porque solo queremos hacer lectura de datos
 def getDatitos():
@@ -42,41 +38,6 @@ def getDatitos():
         return jsonify({"msg": "Ha ocurrido un error"}),500
 
     return '<h1>Success</h1>'
-
-@app.route("/api/datitosper", methods=["GET"])
-def getDatitosByPersona():
-    try:
-        namePersona = request.args["nombre"]
-        datox = datitos.query.filter_by(nombre=namePersona).first()
-        if not datox:
-            return jsonify({"msg": "Esta persona no existe"}),200
-        else:
-            return jsonify(datox.serialize()),200
-    except Exception:
-        exception("[SERVER]: Error->")
-        return jsonify({"msg": "Ha ocurrido un error"}),500
-
-@app.route("/api/datitoscustom", methods=["GET"])
-def getDatitosByCustom():
-    try:
-        fields = {}
-        if "nombre" in request.args:
-            fields["nombre"] = request.args["nombre"]
-
-        if "apellido" in request.args:
-            fields["apellido"] = request.args["apellido"]
-
-        if "numero" in request.args:
-            fields["numero"] = request.args["numero"]
-
-        datox = datitos.query.filter_by(**fields).first()
-        if not datox:
-            return jsonify({"msg": "Esta persona no existe"}),200
-        else:
-            return jsonify(datox.serialize()),200
-    except Exception:
-        exception("[SERVER]: Error->")
-        return jsonify({"msg": "Ha ocurrido un error"}),500
 
 @app.route("/api/agregardatos", methods=["POST"])
 def addPersona():
@@ -164,22 +125,6 @@ def llenarcv():
         datos["perfil"] = datitos.query.filter_by(nombre=namePersona).first()
         print(datos)
         return render_template("modelo_1_cv.html", data=datos)
-
-@app.route("/api/search4per", methods=["POST"])
-def search4per():
-    try:
-        namePersona = request.args["nombre"]
-        datos = {}
-        datos["nombre"] = ""
-        datox = datitos.query.filter(datitos.nombre.like(f"%{namePersona}%")).first()
-        if not datox:
-            return jsonify({"msg": "Esta persona no existe"}),200
-        else:
-            return jsonify(datox.serialize()),200
-    except Exception:
-        exception("[SERVER]: Error in route api/search4per")
-        return jsonify({"msg": "Ha ocurrido un error"}),500
-
 
 @app.route('/formulario')
 def formulario():
