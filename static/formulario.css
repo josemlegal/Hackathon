@@ -5,11 +5,30 @@ html {
   min-height:800px;
 }
 body {
-  background: url('https://i.pinimg.com/originals/48/79/86/487986c17560a8ed1afdc55e480e5be2.png');
+  color: white;
+  background: url('../static/fondo.jpg');
   background-size:cover;
+  background-position: center center;
+
+/* Para que la imagen de fondo no se repita */
+
+  background-repeat: no-repeat;
+
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+
+  background-attachment: fixed;
+
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+
+  background-size: cover;
+
+/* Se muestra un color de fondo mientras se está cargando la imagen
+
+de fondo o si hay problemas para cargarla */
+
   background-repeat:no-repeat;
   text-align: center;
- font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -17,9 +36,15 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+form {
+  color: black;
+}
 
 h1{
-  font-weight:400;
+  -webkit-text-stroke: 1px black; /* width and color */
+
+  font-family: sans; color: white;
+  font-weight:600;
   padding-top:0;
   margin-top:0;
   font-family: 'Roboto Slab',serif;
@@ -78,8 +103,7 @@ section {
   padding: 50px ;
   max-width: 300px;
   margin: 30px auto;
-  background:white;
-  background:rgba(255,255,255,0.9);
+  background:rgb(255 255 255 / 42%);
   backdrop-filter:blur(10px);
   box-shadow:0px 2px 10px rgba(0,0,0,0.3);
   border-radius:5px;
@@ -133,7 +157,7 @@ input {
 }
 
 p{
-  text-align:justify;
+  text-align:center;
 margin-top:0;
 }
 
@@ -141,4 +165,8 @@ margin-top:0;
 .video {
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+.button{
+  width: auto;
+  height: auto;
 }
