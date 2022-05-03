@@ -1,0 +1,238 @@
+# Flask para aplicacion web
+import email
+from flask import Flask, render_template, request, redirect, url_for
+# SQLAlchemy como ORM
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+
+########### Para crear la Base de Datos ###########
+# En consola : 
+# sqlite3 database/task.db
+# *Ya tener el directorio /database
+
+# Instancia la base de datos - /// -> Para que use el lenguak¿je de sqlite
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/task.db'
+db = SQLAlchemy(app)
+
+# Modelo ed la base de datos
+class Task(db.Model):
+    id          = db.Column(db.Integer, primary_key=True)
+    nombre      = db.Column(db.String(200))
+    apellido    = db.Column(db.String(200))
+    edad        = db.Column(db.Integer)
+    fecha_nac   = db.Column(db.String(200))
+    email       = db.Column(db.String(200))
+    num_tel     = db.Column(db.Integer)
+    sobre_mi    = db.Column(db.String(200))
+    virtud1     = db.Column(db.String(200))
+    virtud2     = db.Column(db.String(200))
+    virtud3     = db.Column(db.String(200))
+    hab1        = db.Column(db.String(200))
+    hab2        = db.Column(db.String(200))
+    hab3        = db.Column(db.String(200))
+    soft1        = db.Column(db.String(200))
+    soft2        = db.Column(db.String(200))
+    soft3        = db.Column(db.String(200))
+    enteduc1        = db.Column(db.String(200))
+    enteduc2        = db.Column(db.String(200))
+    enteduc3        = db.Column(db.String(200))
+    ciuform1        = db.Column(db.String(200))
+    ciuform2        = db.Column(db.String(200))
+    ciuform3        = db.Column(db.String(200))
+    añoinicio1        = db.Column(db.String(200))
+    añoinicio2        = db.Column(db.String(200))
+    añoinicio3        = db.Column(db.String(200))
+    añoinicio4        = db.Column(db.String(200))
+    añofin1        = db.Column(db.String(200))
+    añofin2        = db.Column(db.String(200))
+    añofin3        = db.Column(db.String(200))
+    añofin4        = db.Column(db.String(200))
+    nomempresa1        = db.Column(db.String(200))
+    nomempresa2        = db.Column(db.String(200))
+    nomempresa3        = db.Column(db.String(200))
+    nomempresa4        = db.Column(db.String(200))
+    puesto1        = db.Column(db.String(200))
+    puesto2        = db.Column(db.String(200))
+    puesto3        = db.Column(db.String(200))
+    puesto4        = db.Column(db.String(200))
+    actrealiz1        = db.Column(db.String(200))
+    actrealiz2        = db.Column(db.String(200))
+    actrealiz3        = db.Column(db.String(200))
+    actrealiz4        = db.Column(db.String(200))
+    contactoref1        = db.Column(db.Integer)
+    contactoref2        = db.Column(db.Integer)
+    contactoref3        = db.Column(db.Integer)
+    nombreref1        = db.Column(db.String(200))
+    nombreref2        = db.Column(db.String(200))
+    nombreref3        = db.Column(db.String(200))
+    idioma1        = db.Column(db.String(200))
+    idioma2        = db.Column(db.String(200))
+    idioma3        = db.Column(db.String(200))
+    idiomanivel1        = db.Column(db.String(200))
+    idiomanivel2        = db.Column(db.String(200))
+    idiomanivel3        = db.Column(db.String(200))
+    done        = db.Column(db.Boolean)
+# Para renderizar la vista
+@app.route('/')
+def home():
+    tasks = Task.query.all()
+    return render_template('index.html',tasks = tasks)
+
+# POST para escribir - GET para leer
+@app.route('/create-task', methods=['POST'])
+def create():
+    #task en un objeto tipo Task
+        # El id lo asigna el ORM
+        # content lo lee del input del HTML
+    nombre = Task(nombre = request.form['content'], done=False)
+    """ apellido = Task(apellido = request.form['content2'], done=False)
+    edad = Task(edad = request.form['content4'], done=False)
+    fecha_nac = Task(fecha_nac = request.form['content4'], done=False)
+    email = Task(email = request.form['content5'], done=False)
+    num_tel = Task(num_tel = request.form['content6'], done=False)
+    sobre_mi = Task(sobre_mi = request.form['content7'], done=False)
+    virtud1 = Task(virtud1 = request.form['content8'], done=False)
+    virtud2 = Task(virtud2 = request.form['content9'], done=False)
+    virtud3 = Task(virtud3 = request.form['content10'], done=False)
+    hab1 = Task(hab1 = request.form['content11'], done=False)
+    hab2 = Task(hab2 = request.form['content12'], done=False)
+    hab3 = Task(hab3 = request.form['content13'], done=False)
+    soft1 = Task(soft1 = request.form['content14'], done=False)
+    soft2 = Task(soft2 = request.form['content15'], done=False)
+    soft3 = Task(soft3 = request.form['content16'], done=False)
+    año1form = Task(año1form = request.form['content17'], done=False)
+    año2form = Task(año2form = request.form['content18'], done=False)
+    año3form = Task(año3form = request.form['content19'], done=False)
+    enteduc1 = Task(enteduc1 = request.form['content20'], done=False)
+    enteduc2 = Task(enteduc2 = request.form['content21'], done=False)
+    enteduc3 = Task(enteduc3 = request.form['content22'], done=False)
+    ciuform1 = Task(ciuform1 = request.form['content23'], done=False)
+    ciuform2 = Task(ciuform2 = request.form['content24'], done=False)
+    ciuform3 = Task(ciuform3 = request.form['content25'], done=False)
+    añoinicio1 = Task(añoinicio1 = request.form['content26'], done=False)
+    añoinicio2 = Task(añoinicio2 = request.form['content27'], done=False)
+    añoinicio3 = Task(añoinicio3 = request.form['content28'], done=False)
+    añoinicio4 = Task(añoinicio4 = request.form['content29'], done=False)
+    añofin1 = Task(añofin1 = request.form['content30'], done=False)
+    añofin2 = Task(añofin2 = request.form['content31'], done=False)
+    añofin3 = Task(añofin3 = request.form['content32'], done=False)
+    añofin4 = Task(añofin4 = request.form['content33'], done=False)
+    nomempresa1 = Task(nomempresa1 = request.form['content34'], done=False)
+    nomempresa2 = Task(nomempresa2 = request.form['content35'], done=False)
+    nomempresa3 = Task(nomempresa3 = request.form['content36'], done=False)
+    nomempresa4 = Task(nomempresa4 = request.form['content37'], done=False)
+    puesto1 = Task(puesto1 = request.form['content38'], done=False)
+    puesto2 = Task(puesto2 = request.form['content39'], done=False)
+    puesto3 = Task(puesto3 = request.form['content40'], done=False)
+    puesto4 = Task(puesto4 = request.form['content41'], done=False)
+    actrealiz1 = Task(actrealiz1 = request.form['content42'], done=False)
+    actrealiz2 = Task(actrealiz2 = request.form['content43'], done=False)
+    actrealiz3 = Task(actrealiz3 = request.form['content44'], done=False)
+    actrealiz4 = Task(actrealiz4 = request.form['content45'], done=False)
+    contactoref1 = Task(contactoref1 = request.form['content46'], done=False)
+    contactoref2 = Task(contactoref2 = request.form['content47'], done=False)
+    contactoref3 = Task(contactoref3 = request.form['content48'], done=False)
+    nombreref1 = Task(nombreref1 = request.form['content49'], done=False)
+    nombreref2 = Task(nombreref2 = request.form['content50'], done=False)
+    nombreref3 = Task(nombreref3 = request.form['content51'], done=False)
+    empresaref1 = Task(empresaref1 = request.form['content52'], done=False)
+    empresaref2 = Task(empresaref2 = request.form['content53'], done=False)
+    empresaref3 = Task(empresaref3 = request.form['content54'], done=False)
+    idioma1 = Task(idioma1 = request.form['content55'], done=False)
+    idioma2 = Task(idioma2 = request.form['content56'], done=False)
+    idioma3 = Task(idioma3 = request.form['content57'], done=False)
+    idiomanivel1 = Task(idiomanivel1 = request.form['content58'], done=False)
+    idiomanivel2 = Task(idiomanivel2 = request.form['content59'], done=False)
+    idiomanivel3 = Task(idiomanivel3 = request.form['content60'], done=False)
+ """
+    db.session.add(nombre)
+    db.session.add(apellido)
+    db.session.add(edad)
+    db.session.add(fecha_nac)
+    db.session.add(email)
+    db.session.add(num_tel)
+    db.session.add(sobre_mi)
+    db.session.add(virtud1)
+    db.session.add(virtud2)
+    db.session.add(virtud3)
+    db.session.add(hab1)
+    db.session.add(hab2)
+    db.session.add(hab3)
+    db.session.add(soft1)
+    db.session.add(soft2)
+    db.session.add(soft3)
+    db.session.add(año1form)
+    db.session.add(año2form)
+    db.session.add(año3form)
+    db.session.add(enteduc1)
+    db.session.add(enteduc2)
+    db.session.add(enteduc3)
+    db.session.add(ciuform1)
+    db.session.add(ciuform2)
+    db.session.add(ciuform3)
+    db.session.add(añoinicio1)
+    db.session.add(añoinicio2)
+    db.session.add(añoinicio3)
+    db.session.add(añoinicio4)
+    db.session.add(añofin1)
+    db.session.add(añofin2)
+    db.session.add(añofin3)
+    db.session.add(añofin4)
+    db.session.add(nomempresa1)
+    db.session.add(nomempresa2)
+    db.session.add(nomempresa3)
+    db.session.add(nomempresa4)
+    db.session.add(puesto1)
+    db.session.add(puesto2)
+    db.session.add(puesto3)
+    db.session.add(puesto4)
+    db.session.add(actrealiz1)
+    db.session.add(actrealiz2)
+    db.session.add(actrealiz3)
+    db.session.add(actrealiz4)
+    db.session.add(contactoref1)
+    db.session.add(contactoref2)
+    db.session.add(contactoref3)
+    db.session.add(nombreref1)
+    db.session.add(nombreref2)
+    db.session.add(nombreref3)
+    db.session.add(empresaref1)
+    db.session.add(empresaref2)
+    db.session.add(empresaref3)
+    db.session.add(idioma1)
+    db.session.add(idioma2)
+    db.session.add(idioma3)
+    db.session.add(idiomanivel1)
+    db.session.add(idiomanivel2)
+    db.session.add(idiomanivel3)
+    db.session.commit() # Para que lo guarde/ejecute
+    return redirect(url_for('home'))
+    
+
+@app.route('/done/<id>')
+def done(id):
+    task = Task.query.filter_by(id=int(id)).first()
+    task.done = not(task.done) # Si esta en True pasa a False
+    db.session.commit()
+    return redirect(url_for('home'))
+
+
+@app.route('/delete/<id>')
+def delete(id):
+    # task = Task.query.filter_by(id=int(id)).first() -- Devuelve el primer id que coincida
+    task = Task.query.filter_by(id=int(id)).delete() # Elimina el primer id que coincida
+    db.session.commit()
+    return redirect(url_for('home'))
+
+    ########## Crear las tablas en la base de datos ##########
+    # En python : 
+    # > python
+    # > from app import db
+    # > db.create_all()
+
+    
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
