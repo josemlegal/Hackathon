@@ -9,128 +9,127 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{url_for('static' , filename= 'estilos.css')}}">
 </head>
-<body id="top">
-    <!--Page 1-->
-    <page size="A4">
-        <div id="button" class="no-print">
-        <button type="button" onclick="myFunction()"><span class="button-txt"><i class="fa fa-print" aria-hidden="true"></i>
-        &nbsp;Imprimir PDF</span></button>
-        <script>
-            function myFunction() {
-                window.print();
-            }
-        </script>
-        </div>
-        <div class="cv">
-        <div id="header">
-            <div class="contactDetails">
-                <ul>
-                    <li class="icon" title="Kirjuta mulle!"><a href='{{data["perfil"]["email"]}}'><i class="fa fa-envelope">&nbsp;&nbsp;</i>{{data["perfil"]["email"]}}</a></li>
-                    <li class="icon" title="Helista mulle!"><a href='{{data["perfil"]["num_tel"]}}'><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;{{data["perfil"]["num_tel"]}}</a></li>
-                
-                </ul>
+    <body id="top">
+        <!--Page 1-->
+        <page size="A4">
+            <div id="button" class="no-print">
+            <button type="button" onclick="myFunction()"><span class="button-txt"><i class="fa fa-print" aria-hidden="true"></i>
+            &nbsp;Imprimir PDF</span></button>
+            <script>
+                function myFunction() {
+                    window.print();
+                }
+            </script>
             </div>
-        </div>
-        <div class="mainDetails">
-            <div id="headshot">
-                <img id="avatar" src="https://visualangle.ee/delivery/temp_image/icon.png" alt="Margus Lillemagi" title="See olen mina" />
+            <div class="cv">
+            <div id="header">
+                <div class="contactDetails">
+                    <ul>
+                        <li class="icon" title="Kirjuta mulle!"><a href='{{data["perfil"]["email"]}}'><i class="fa fa-envelope">&nbsp;&nbsp;</i>{{data["perfil"]["email"]}}</a></li>
+                        <li class="icon" title="Helista mulle!"><a href='{{data["perfil"]["num_tel"]}}'><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;{{data["perfil"]["num_tel"]}}</a></li>
+                    
+                    </ul>
+                </div>
             </div>
-            <div id="name">
-                <h1>{{data["perfil"]["nombre"]}}</br>{{data["perfil"]["apellido"]}}<span class="nameDetails">&nbsp;&nbsp;{{data["perfil"]["fecha_nac"]}}</span></h1>
+            <div class="mainDetails">
+                <div id="headshot">
+                    <img id="avatar" src="https://visualangle.ee/delivery/temp_image/icon.png" alt="Margus Lillemagi" title="See olen mina" />
+                </div>
+                <div id="name">
+                    <h1>{{data["perfil"]["nombre"]}}</br>{{data["perfil"]["apellido"]}}<span class="nameDetails">&nbsp;&nbsp;{{data["perfil"]["fecha_nac"]}}</span></h1>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-        </div>
-        <div id="mainArea">
-            <section>
-                <article>
+            <div id="mainArea">
+                <section>
+                    <article>
+                        <div class="sectionTitle">
+                        <h1>Sobre mí</h1>
+                        </div>
+                        <div class="sectionContent">
+                        <p>{{data["perfil"]["sobre_mi"]}}</p>
+                        </div>
+                    </article>
+                    <div class="clear"></div>
+                </section>
+                <section>
                     <div class="sectionTitle">
-                    <h1>Sobre mí</h1>
+                        <h1>Habilidades y conocimiento</h1>
                     </div>
                     <div class="sectionContent">
-<body>
-                    <p>{{data["perfil"]["sobre_mi"]}}</p>
+                        <ul class="keySkills">
+                        <li class="subDetails">Virtudes</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud1"]}}</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud2"]}}</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud3"]}}</li>
+                        <li class="subDetails">Habilidades</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab1"]}}</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab2"]}}</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab3"]}}</li>
+                        <li class="subDetails">Manejo de Software</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft1"]}}</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft2"]}}</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft3"]}}</li>
+
+                        </ul>
                     </div>
-                </article>
-                <div class="clear"></div>
-            </section>
-            <section>
-                <div class="sectionTitle">
-                    <h1>Habilidades y conocmiento</h1>
-                </div>
-                <div class="sectionContent">
-                    <ul class="keySkills">
-                    <li class="subDetails">Virtudes</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud1"]}}</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud2"]}}</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["virtud3"]}}</li>
-                    <li class="subDetails">Habilidades</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab1"]}}</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab2"]}}</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["hab3"]}}</li>
-
-                    <li class="subDetails">Manejo de Software</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft1"]}}</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft2"]}}</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["soft3"]}}</li>
-
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </section>
-            <section>
-                <div class="sectionTitle">
-                    <h1>Formacion Academica</h1>
-                </div>
-                <div class="sectionContent">
-                    <ul class="list">
-                        <li><span class="subDetails">{{data["perfil"]["añoinicio1"]}} - {{data["perfil"]["añofin1"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["enteduc1"]}}</span> - {{data["perfil"]["ciuform1"]}}</li>
-                        <li><span class="subDetails">{{data["perfil"]["añoinicio2"]}} - {{data["perfil"]["añofin2"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["enteduc2"]}}</span>- {{data["perfil"]["ciuform2"]}}</li>
-                        <li><span class="subDetails">{{data["perfil"]["añoinicio3"]}} - {{data["perfil"]["añofin3"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["enteduc3"]}}</span> - {{data["perfil"]["ciuform3"]}}</li>
-                </div>
-                <div class="clear"></div>
-            </section>
-            <section>
-                <div class="sectionTitle">
-                    <h1>Experiencia Laboral</h1>
-                </div>
-                <div class="sectionContent">
-                    <ul class="list">
-                    <li><span class="subDetails">{{data["perfil"]["añoinicio1"]}} - {{data["perfil"]["añofin1"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto1"]}}</span> -{{data["perfil"]["actrealiz1"]}}</li>
-                    <li><span class="subDetails">{{data["perfil"]["añoinicio2"]}} - {{data["perfil"]["añofin2"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto2"]}}</span> -{{data["perfil"]["actrealiz2"]}}</li>
-                    <li><span class="subDetails">{{data["perfil"]["añoinicio3"]}} - {{data["perfil"]["añofin3"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto3"]}}</span> -{{data["perfil"]["actrealiz3"]}}</li>
-                    <li><span class="subDetails">{{data["perfil"]["añoinicio4"]}} - {{data["perfil"]["añofin4"]}}&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["puesto4"]}}</span> -{{data["perfil"]["actrealiz4"]}}</li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </section>
-            <section>
-                <div class="sectionTitle">
-                    <h1>Referencia Laboral</h1>
-                </div>
-                <div class="sectionContent">
-                    <ul class="list">
-                    <li><span class="subDetails">{{data["perfil"]["contactoref1"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref1"]}}</li>
-                    <li><span class="subDetails">{{data["perfil"]["contactoref2"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref2"]}}</li>
-                    <li><span class="subDetails">{{data["perfil"]["contactoref3"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref3"]}}</li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </section>
-            <section>
-                <div class="sectionTitle">
-                    <h1>Idiomas</h1>
-                </div>
-                <div class="sectionContent">
-                    <ul class="list">
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma1"]}} - {{data["perfil"]["idiomanivel1"]}} </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma2"]}} - {{data["perfil"]["idiomanivel2"]}} </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma3"]}} - {{data["perfil"]["idiomanivel3"]}} </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </section>
-        </div>
-        </div>
-    </page>
-</body>
-<html>  
+                    <div class="clear"></div>
+                </section>
+                <section>
+                    <div class="sectionTitle">
+                        <h1>Formacion Academica</h1>
+                    </div>
+                    <div class="sectionContent">
+                        <ul class="list">
+                            <li><span class="subDetails"></span><span class="bold"> {{data["perfil"]["año1form"]}}&nbsp;&nbsp; - {{data["perfil"]["enteduc1"]}}</span> </li>
+                            <li><span class="subDetails">&nbsp;&nbsp;</span><span class="bold">{{data["perfil"]["año1form"]}}&nbsp;&nbsp; - {{data["perfil"]["enteduc2"]}}</span></li>
+                            <li><span class="subDetails">&nbsp;&nbsp;</span><span class="bold">- {{data["perfil"]["enteduc2"]}}</span></li>
+                            <li><span class="subDetails"> &nbsp;&nbsp;</span>{{data["perfil"]["año3form"]}}<span class="bold">- {{data["perfil"]["enteduc3"]}}</span></li>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                <section>
+                    <div class="sectionTitle">
+                        <h1>Experiencia Laboral</h1>
+                    </div>
+                    <div class="sectionContent">
+                        <ul class="list">
+                        <li><span class="subDetails">{{data["perfil"]["añofin1"]}} - {{data["perfil"]["puesto1"]}} &nbsp;&nbsp;</span><span class="bold"> - &nbsp;&nbsp;{{data["perfil"]["actrealiz1"]}} </span> </li>
+                        <li><span class="subDetails">{{data["perfil"]["añofin2"]}}- {{data["perfil"]["puesto2"]}}  &nbsp;&nbsp;</span><span class="bold"> -&nbsp;&nbsp;{{data["perfil"]["actrealiz2"]}} </span> </li>
+                        <li><span class="subDetails">{{data["perfil"]["añofin3"]}} - {{data["perfil"]["puesto3"]}} &nbsp;&nbsp;</span><span class="bold"> -&nbsp;&nbsp;{{data["perfil"]["actrealiz3"]}}</span> </li>
+                        <li><span class="subDetails">{{data["perfil"]["añofin4"]}} - {{data["perfil"]["puesto4"]}} &nbsp;&nbsp;</span><span class="bold"> - &nbsp;&nbsp;  {{data["perfil"]["actrealiz4"]}}</span> </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                <section>
+                    <div class="sectionTitle">
+                        <h1>Referencia Laboral</h1>
+                    </div>
+                    <div class="sectionContent">
+                        <ul class="list">
+                        <li><span class="subDetails">{{data["perfil"]["contactoref1"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref1"]}} - {{data["perfil"]["empresaref1"]}} </li>
+                        <li><span class="subDetails">{{data["perfil"]["contactoref2"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref2"]}} - {{data["perfil"]["empresaref2"]}} </li>
+                        <li><span class="subDetails">{{data["perfil"]["contactoref3"]}}&nbsp;&nbsp;</span>{{data["perfil"]["nombreref3"]}} - {{data["perfil"]["empresaref3"]}}</li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                <section>
+                    <div class="sectionTitle">
+                        <h1>Idiomas</h1>
+                    </div>
+                    <div class="sectionContent">
+                        <ul class="list">
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma1"]}} - {{data["perfil"]["idiomanivel1"]}} </li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma2"]}} - {{data["perfil"]["idiomanivel2"]}} </li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;{{data["perfil"]["idioma3"]}} - {{data["perfil"]["idiomanivel3"]}} </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+            </div>
+            </div>
+        </page>
+    </body>
+</html>  
