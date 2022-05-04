@@ -9,45 +9,54 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{url_for('static' , filename= 'estilos.css')}}">
 </head>
-<body id="top">
-    <!--Page 1-->
-    <page size="A4">
-        <div id="button" class="no-print">
-        <button type="button" onclick="myFunction()"><span class="button-txt"><i class="fa fa-print" aria-hidden="true"></i>
-        &nbsp;Imprimir PDF</span></button>
-        <script>
-            function myFunction() {
-                window.print();
-            }
-        </script>
-        </div>
-        <div class="cv">
-        <div id="header">
-            <div class="contactDetails">
-                <ul>
-                    <li class="icon" title="Kirjuta mulle!"><a href='{{data["perfil"]["email"]}}'><i class="fa fa-envelope">&nbsp;&nbsp;</i>{{data["perfil"]["email"]}}</a></li>
-                    <li class="icon" title="Helista mulle!"><a href='{{data["perfil"]["num_tel"]}}'><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;{{data["perfil"]["num_tel"]}}</a></li>
-                
-                </ul>
+    <body id="top">
+        <!--Page 1-->
+        <page size="A4">
+            <div id="button" class="no-print">
+            <button type="button" onclick="myFunction()"><span class="button-txt"><i class="fa fa-print" aria-hidden="true"></i>
+            &nbsp;Imprimir PDF</span></button>
+            <script>
+                function myFunction() {
+                    window.print();
+                }
+            </script>
             </div>
-        </div>
-        <div class="mainDetails">
-            <div id="headshot">
-                <img id="avatar" src="https://visualangle.ee/delivery/temp_image/icon.png" alt="Margus Lillemagi" title="See olen mina" />
+            <div class="cv">
+            <div id="header">
+                <div class="contactDetails">
+                    <ul>
+                        <li class="icon" title="Kirjuta mulle!"><a href='{{data["perfil"]["email"]}}'><i class="fa fa-envelope">&nbsp;&nbsp;</i>{{data["perfil"]["email"]}}</a></li>
+                        <li class="icon" title="Helista mulle!"><a href='{{data["perfil"]["num_tel"]}}'><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;{{data["perfil"]["num_tel"]}}</a></li>
+                    
+                    </ul>
+                </div>
             </div>
-            <div id="name">
-                <h1>{{data["perfil"]["nombre"]}}</br>{{data["perfil"]["apellido"]}}<span class="nameDetails">&nbsp;&nbsp;{{data["perfil"]["fecha_nac"]}}</span></h1>
+            <div class="mainDetails">
+                <div id="headshot">
+                    <img id="avatar" src="https://visualangle.ee/delivery/temp_image/icon.png" alt="Margus Lillemagi" title="See olen mina" />
+                </div>
+                <div id="name">
+                    <h1>{{data["perfil"]["nombre"]}}</br>{{data["perfil"]["apellido"]}}<span class="nameDetails">&nbsp;&nbsp;{{data["perfil"]["fecha_nac"]}}</span></h1>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-        </div>
-        <div id="mainArea">
-            <section>
-                <article>
+            <div id="mainArea">
+                <section>
+                    <article>
+                        <div class="sectionTitle">
+                        <h1>Sobre mí</h1>
+                        </div>
+                        <div class="sectionContent">
+                        <p>{{data["perfil"]["sobre_mi"]}}</p>
+                        </div>
+                    </article>
+                    <div class="clear"></div>
+                </section>
+                <section>
                     <div class="sectionTitle">
-                    <h1>Sobre mí</h1>
+                        <h1>Habilidades y conocimiento</h1>
                     </div>
                     <div class="sectionContent">
-<body>
                     <p>{{data["perfil"]["sobre_mi"]}}</p>
                     </div>
                 </article>

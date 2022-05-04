@@ -51,22 +51,11 @@
   <p>Si ya trabajaste antes ¿Cual es tu experiencia? &#129309	&#128084	</p> <br>
   <input type="text" name="nomempresa1" placeholder="¿Como se llamaba tu lugar de trabajo? " /> <br>
   <p>Fecha de Ingreso &#128197 &#10549</p><br>
+  <input type="text" name="puesto1" placeholder="¿Nombre del Puesto? " /> <br>
   <input type="date" name="añoinicio1" placeholder="Fecha de Ingreso"  id="datepicker"><br>
   <p>Fecha de Salida &#128197 &#10548</p><br>
   <input type="date" name="añofin1" placeholder="Fecha de Salida"  id="datepicker">
   <input type="text" name="actrealiz1" placeholder="Actividad Realizada " />
-<!-- <<<<<< HEAD
-=======
-  <div class="input_fields_wrap">
-    ''''<button class="add_field_button"> &#10133 Actividades</button>''''
-    <!-- <div><input type="text" name="mytext[]"></div> >>>>>>> 370ea5316fdd6484446f770d2be4add7e026d093
->>>>>>> 3e5989aec53aed508bdebb407ec96aa0ed983c2f--> -->
-
-  </div>
- 
-
-
-<!-- >>>>>>> 02974fdb497840e2adc717bc08252079190b445a -->
 </section>
 <section>
   <p>Algunas referencias  &#129309	&#128084	 </p>
@@ -76,12 +65,12 @@
   <input type="text" name="contactoref1"  placeholder="Numero de Contacto">
   <p>Referencia laboral &#128084</p>
   <input type="text"  name="nombreref2" placeholder="¿Como se llama? " />
-  <input type="text" name= "empresaref1" placeholder="¿Lugar de trabajo?">
+  <input type="text" name= "empresaref2" placeholder="¿Lugar de trabajo?">
   <input type="text" name="contactoref2" placeholder="Numero de Contacto">
   <p>Referencia personal &#9996</p>
   <input type="text" name="nombreref3" placeholder="¿Como se llama? " />
-  <input type="text" name= "empresaref1" placeholder="¿Lugar de trabajo?">
-  <input type="text" name="contactoref1" placeholder="Numero de Contacto">
+  <input type="text" name= "empresaref3" placeholder="¿Lugar de trabajo?">
+  <input type="text" name="contactoref3" placeholder="Numero de Contacto">
   
 </section>
 
@@ -89,13 +78,13 @@
   <p>¿Que formación academica tuviste? &#128221 &#128218</p>
   <input type="text" name="enteduc1" placeholder=" Educacion Primaria " />
   <p> Fecha de Culminación &#128197 &#128282</p>
-  <input type="date" name="añofin1" placeholder="Fecha de Culminacion " />
+  <input type="date" name="año1form" placeholder="Fecha de Culminacion " />
   <input  type="text" name="enteduc2" placeholder="Educacion Secundaria " />
   <p> Fecha de Culminación &#128197 &#128282</p>
-  <input type="date" name="añofin2" placeholder="Fecha de Culminacion " />
+  <input type="date" name="año2form" placeholder="Fecha de Culminacion " />
   <input  type="text"  name="enteduc3" placeholder="Educacion Superior " />
   <p> Fecha de Culminación &#128197 &#128282</p>
-  <input type="date" name="añofin3" placeholder="Fecha de Culminacion " />
+  <input type="date" name="año3form" placeholder="Fecha de Culminacion " />
  
   
 </section>
@@ -134,50 +123,46 @@
     </select>
     <p>Tercer Idioma &#127758</p>
     <select name="idioma3" id="cars">
-      <option value="Excel"></option>
-      <option value="Word">Español</option>
-      <option value="Word">Inglés</option>
-      <option value="opel">Aleman</option>
-      <option value="opel">Chino Mandarin</option>
-      <option value="opel">Guaraní </option>
+      <option value=" "> </option>
+      <option value="Español">Español</option>
+      <option value="Inglés">Inglés</option>
+      <option value="Aleman">Aleman</option>
+      <option value="Chino Mandarin">Chino Mandarin</option>
+      <option value="Guaraní">Guaraní </option>
     </select>
     <select name="idiomanivel3" id="cars">
-      <option value="Excel"></option>
-      <option value="Word">Basico</option>
-      <option value="Word">Intermedio</option>
-      <option value="opel">Avanzado</option>
-      <option value="opel">Nativo</option>
+      <option value=" "> </option>
+      <option value="Basico">Basico</option>
+      <option value="Intermedio">Intermedio</option>
+      <option value="Avanzado">Avanzado</option>
+      <option value="Nativo">Nativo</option>
     </select>
 
 </section>
 <section>
   <section style="display: grid !important">
-    <p>¿Habilidades? &#128221 &#128218</p>
-  
-
     <label for="cars">¿Habilidades en Ofimática? ¿Cuáles?  &#128187 </label>
-    <select name="hab1" id="cars">
+    <select name="soft1" id="cars">
       <option value=" "></option>
-      <option value="Excel">Microsoft Excel</option>
-      <option value="Word">Microsoft Word</option>
-      <option value="opel">Microsoft Paint</option>
+      <option value="Microsoft Excel">Microsoft Excel</option>
+      <option value="Microsoft Word">Microsoft Word</option>
+      <option value="Microsoft Paint">Microsoft Paint</option>
 
     </select>
-
-  </section>
-    <select name="hab2" id="cars">
-      <option value=" "></option>
-      <option value="Excel">Microsoft Excel</option>
-      <option value="Word">Microsoft Word</option>
-      <option value="opel">Microsoft Paint</option>
+    <select name="soft2" id="cars">
+      <option value=" "></option>      
+      <option value="Microsoft Excel">Microsoft Excel</option>
+      <option value="Microsoft Word">Microsoft Word</option>
+      <option value="Microsoft Paint">Microsoft Paint</option>
     </select>
 
-    <select name="hab3" id="cars">
+    <select name="soft3" id="cars">
       <option value=" "></option>
-      <option value="Excel">Microsoft Excel</option>
-      <option value="Word">Microsoft Word</option>
-      <option value="opel">Microsoft Paint</option>
+      <option value="Microsoft Excel">Microsoft Excel</option>
+      <option value="Microsoft Word">Microsoft Word</option>
+      <option value="Microsoft Paint">Microsoft Paint</option>
     </select>
+    
     <label for="cars">Tus principales virtudes  &#129505 </label> <br>
     <select name="virtud1" id="cars"><br>
       <option value=" "></option><br>
@@ -201,21 +186,21 @@
     </select>
     
     <label for="cars">Más sobre tus habilidades en el trabajo  &#128188  </label>
-    <select name="soft1" id="cars">
+    <select name="hab1" id="cars">
       <option value=" "></option>
       <option value="Trabajo En Equipo">Trabajo en Equipo</option>
       <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
       <option value="Enfoque en objetivos">Enfoque en objetivos</option>
     </select>
     
-    <select name="soft2" id="cars">
+    <select name="hab2" id="cars">
       <option value=" "></option>
       <option value="Trabajo En Equipo">Trabajo en Equipo</option>
       <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
       <option value="Enfoque en objetivos">Enfoque en objetivos</option>
     </select>
     
-    <select name="soft3" id="cars">
+    <select name="hab3" id="cars">
       <option value=" "></option>
       <option value="Trabajo En Equipo">Trabajo en Equipo</option>
       <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
@@ -406,9 +391,3 @@ var countries = []
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>
-
-
-
-
-
-
