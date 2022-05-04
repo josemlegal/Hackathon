@@ -1,12 +1,13 @@
 import sqlite3 as sql
 
 #CREO UNA RUTA ABSOLUTA A MI BASE DE DATOS
-DB_PATH = "C:\\Users\\Usuario\\OneDrive\\Escritorio\\super_base_scorpion\\databases\\datitos.db"
+DB_PATH = "C:\\Users\\Usuario\\.ssh\\Hackathon\\databases\\datitos.db"
 
 #CREAMOS BASE DE DATOS A UTILIZAR
 def crearBD():
     conectar = sql.connect(DB_PATH)
     cursor = conectar.cursor()
+#    cursor.execute("""DELETE FROM datitos""")
     cursor.execute("""CREATE TABLE datitos (
         nombre  text,
 apellido  text,
