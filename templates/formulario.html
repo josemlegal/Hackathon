@@ -20,7 +20,7 @@
      
     <div id="svg_wrap"></div>
 
-    <h1>Ayudanos a crear tu Curriculum &#128196</h1>
+    <h1 class=>Ayudanos a crear tu Curriculum &#128196</h1>
   
     
   <form autocomplete="on" action="/api/agregardatos" method="POST">
@@ -48,19 +48,25 @@
 </section>
 
 <section>
-  <p>Si ya trabajaste antes ¿Cual es tu experiencia? &#129309	&#128084	 </p>
-  <input type="text" name="nomempresa1" placeholder="¿Como se llamaba tu lugar de trabajo? " />
-  <p>Fecha de Ingreso &#128197 &#10549</p>
-  <input type="date" name="añoinicio1" placeholder="Fecha de Ingreso"  id="datepicker">
-  <p>Fecha de Salida &#128197 &#10548</p>
+  <p>Si ya trabajaste antes ¿Cual es tu experiencia? &#129309	&#128084	</p> <br>
+  <input type="text" name="nomempresa1" placeholder="¿Como se llamaba tu lugar de trabajo? " /> <br>
+  <p>Fecha de Ingreso &#128197 &#10549</p><br>
+  <input type="date" name="añoinicio1" placeholder="Fecha de Ingreso"  id="datepicker"><br>
+  <p>Fecha de Salida &#128197 &#10548</p><br>
   <input type="date" name="añofin1" placeholder="Fecha de Salida"  id="datepicker">
   <input type="text" name="actrealiz1" placeholder="Actividad Realizada " />
+<!-- <<<<<< HEAD
+=======
   <div class="input_fields_wrap">
-    <button class="add_field_button"> &#10133 Actividades</button>
-    <!-- <div><input type="text" name="mytext[]"></div> -->
+    ''''<button class="add_field_button"> &#10133 Actividades</button>''''
+    <!-- <div><input type="text" name="mytext[]"></div> >>>>>>> 370ea5316fdd6484446f770d2be4add7e026d093
+>>>>>>> 3e5989aec53aed508bdebb407ec96aa0ed983c2f--> -->
+
   </div>
  
 
+
+<!-- >>>>>>> 02974fdb497840e2adc717bc08252079190b445a -->
 </section>
 <section>
   <p>Algunas referencias  &#129309	&#128084	 </p>
@@ -145,7 +151,8 @@
 
 </section>
 <section>
-  <p>¿Habilidades? &#128221 &#128218</p>
+  <section style="display: grid !important">
+    <p>¿Habilidades? &#128221 &#128218</p>
   
 
     <label for="cars">¿Habilidades en Ofimática? ¿Cuáles?  &#128187 </label>
@@ -157,6 +164,7 @@
 
     </select>
 
+  </section>
     <select name="hab2" id="cars">
       <option value=" "></option>
       <option value="Excel">Microsoft Excel</option>
@@ -170,11 +178,11 @@
       <option value="Word">Microsoft Word</option>
       <option value="opel">Microsoft Paint</option>
     </select>
-    <label for="cars">Tus principales virtudes  &#129505 </label>
-    <select name="virtud1" id="cars">
-      <option value=" "></option>
-      <option value="Honestidad">Honestidad</option>
-      <option value="Lealtad">Lealtad</option>
+    <label for="cars">Tus principales virtudes  &#129505 </label> <br>
+    <select name="virtud1" id="cars"><br>
+      <option value=" "></option><br>
+      <option value="Honestidad">Honestidad</option><br>
+      <option value="Lealtad">Lealtad</option><br>
       <option value="Puntualidad">Puntualidad</option>
     </select>
     
@@ -193,21 +201,21 @@
     </select>
     
     <label for="cars">Más sobre tus habilidades en el trabajo  &#128188  </label>
-    <select name="hab1" id="cars">
+    <select name="soft1" id="cars">
       <option value=" "></option>
       <option value="Trabajo En Equipo">Trabajo en Equipo</option>
       <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
       <option value="Enfoque en objetivos">Enfoque en objetivos</option>
     </select>
     
-    <select name="hab2" id="cars">
+    <select name="soft2" id="cars">
       <option value=" "></option>
       <option value="Trabajo En Equipo">Trabajo en Equipo</option>
       <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
       <option value="Enfoque en objetivos">Enfoque en objetivos</option>
     </select>
     
-    <select name="hab3" id="cars">
+    <select name="soft3" id="cars">
       <option value=" "></option>
       <option value="Trabajo En Equipo">Trabajo en Equipo</option>
       <option value="Trabajo bajo Presión">Trabajo bajo Presión</option>
@@ -220,11 +228,19 @@
   <input type="file" accept="image/*" class="subida" />
 </section>
 
-  <div class="button" id="prev">&larr; Atras</div>
+
+  <section class="centro">
+  
+    <iframe class = "video" width="560" height="315" src="https://www.youtube.com/embed/ly36kn0ug4k" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+  </section>
+
+<div class="button" id="prev">&larr; Atras</div>
 <div class="button" id="next">Siguiente &rarr;</div>
 <input class="button" value="Aceptar y Generar CV" id="submit" type="submit"/>
 
-</form>
+
+
 
 
 
