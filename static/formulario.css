@@ -64,7 +64,7 @@ h1{
 }
 
 .button {
-  background: rgb(237, 40, 70);
+  background: rgba(237,120,171,255);
   border-radius: 5px;
   padding: 15px 25px;
   display: inline-block;
@@ -88,7 +88,7 @@ div.container {
 }
 
 .subida {
-  background: rgb(237, 40, 70);
+  background: rgba(237,120,171,255);
   border-radius: 5px;
   padding: 15px 25px;
   display: inline-block;

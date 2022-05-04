@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var base_color = "rgb(230,230,230)";
-    var active_color = "rgb(237, 40, 70)";
+    var active_color = "rgba(237,120,171,255)";
   
     var child = 1;
     var length = $("section").length - 1;
