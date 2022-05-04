@@ -130,5 +130,10 @@ def llenarcv():
 def formulario():
     return render_template('formulario.html')
 
+@app.route('/formulario_guarani')
+def formulario_guarani():
+    return render_template('formulario_guarani.html')
+
 if __name__ == "__main__":
     app.run(debug=True,port=4000)
+
